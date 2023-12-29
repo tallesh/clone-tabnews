@@ -14,5 +14,5 @@ test("GET to api/v1/status should return  database status", async () => {
   const responseBody = await response.json();
   expect(responseBody.database.version).toBeDefined();
   expect(responseBody.database.max_connections).toBeDefined();
-  expect(responseBody.database.used_connections).toBeDefined();
+  expect(responseBody.database.used_connections).toBe(1);
 });
