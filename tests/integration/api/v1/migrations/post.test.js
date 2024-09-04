@@ -10,7 +10,7 @@ test("POST to api/v1/migrations should return status code 200", async () => {
   const response = await fetch("http://localhost:3000/api/v1/migrations", {
     method: "POST",
   });
-  expect(response.status).toBe(200);
+  expect(response.status).toBe(201);
 
   const responseBody = await response.json();
   expect(responseBody.length).toBeGreaterThan(0);
